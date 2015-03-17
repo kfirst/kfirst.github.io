@@ -1,1 +1,24 @@
+# general configuration
+url: http://kfirst.github.io
+baseurl: ''
 
+# compass configuration
+compass:
+  # an avatar or logo (optional)
+  logo: "/images/compass.png"
+  # author will appear under the avatar (optional)
+  author: "孔祥欣"
+  # tagline will appear under the title (optional)
+  tagline: "业余搬砖爱好者"
+  # if include_analytics is true, the content of the analytics.html include will
+  # be added at the end of the <head> section. You can add your Google Analytics
+  # Tracking Code to that file.
+  include_analytics: false
+
+# Dependencies
+markdown: kramdown
+highlighter: pygments
+
+# Permalinks
+permalink: pretty
+relative_permalinks: true

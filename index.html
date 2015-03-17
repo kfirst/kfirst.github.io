@@ -1,14 +1,54 @@
 ---
-layout: default
-title: 我的Blog
+title: 首页
 ---
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+<div class="wrapper">
+    <header>
+        {% if site.compass.logo %}
+        <div class="logo-container">
+            <a class="logo" href="{{ page.baseurl }}"
+               style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
+        </div>
+        {% endif %}
 
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} 
-		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	</li>
-	{% endfor %}
-</ul>
+        {% if site.compass.author %}
+        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+        {% endif %}
+
+        {% if site.compass.tagline %}
+        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
+        {% endif %}
+    </header>
+    <main>
+        <div class="content">
+            <h2>关于我</h2>
+
+            <p>这应该是一段介绍，但是这个人很懒，什么也没有留下。</p>
+
+            <h2>关于本站</h2>
+            <ul>
+                <li>个人博客</li>
+                <li>技术相关</li>
+                <li>写着玩</li>
+            </ul>
+
+            <p>下面应该是文章列表</p>
+
+            <hr/>
+
+            <ul class="fa-ul main-list">
+                {% for post in site.posts %}
+                <li class="main-list-item">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <span>{{ post.date | date_to_string }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+</div>
+</body>
+</html>

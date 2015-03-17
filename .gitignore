@@ -1,0 +1,17 @@
+# Jekyll
+/_site
+/*.lock
+
+# Intellij IDEA config
+.idea
+*.iml
+/out
+
+# Eclipse config
+.classpath
+.project
+.settings
+/bin
+
+# icon cache
+.DS_Store

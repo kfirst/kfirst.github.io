@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+<div class="wrapper">
+    <header>
+        <div class="author-container"><h1>{{ page.title }}</h1></div>
+
+        {% if page.subtitle %}
+        <div class="tagline-container"><p>{{ page.subtitle }}</p></div>
+        {% endif %}
+
+        <div class="tagline-container"><p>{{ page.date | date_to_string }}</p></div>
+
+        {% include comments.html %}
+    </header>
+    <main>
+        <div class="content">
+            {{ content }}
+        </div>
+    </main>
+</div>
+</body>
+</html>
