@@ -14,7 +14,7 @@ $background-color: #EEEEEE;
 
 body {
   font-family: 'Vollkorn', Georgia, serif;
-  font-size: 1.1em;
+  font-size: 1em;
   color: $text-color;
   background-color: $background-color;
 }
@@ -83,7 +83,7 @@ since it must be aligned with the content */
 
 /*** author ***/
 .author-container h1 {
-  font-size: 2.1em;
+  font-size: 2.2em;
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
@@ -159,6 +159,10 @@ footer {
   .content img {
     width: 390px;
   }
+
+  comment {
+    padding-top: 10px;
+  }
 }
 
 /* All other devices (1024px and up) */
@@ -184,7 +188,7 @@ footer {
   comment {
     float: left;
     width: 309px;
-    text-align: right;
+    padding-top: 0;
   }
 
   .author-container h1,
