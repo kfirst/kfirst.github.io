@@ -21,7 +21,33 @@ title: 首页
         {% if site.compass.tagline %}
         <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
         {% endif %}
+    </header>
+    <main>
+        <div class="content">
+            <h2>关于我</h2>
 
+            <p>这应该是一段介绍，但是这个人很懒，什么也没有留下。</p>
+
+            <h2>关于本站</h2>
+            <ul>
+                <li>个人博客</li>
+                <li>技术相关</li>
+                <li>写着玩</li>
+            </ul>
+
+            <p>下面应该是文章列表</p>
+
+            <ul class="fa-ul main-list">
+                {% for post in site.posts %}
+                <li class="main-list-item">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <span>{{ post.date | date_to_string }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    <comment>
         <!-- 多说最新评论 start -->
         <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1"
              data-show-admin="1" data-excerpt-length="70"></div>
@@ -40,34 +66,7 @@ title: 首页
             })();
         </script>
         <!-- 多说公共JS代码 end -->
-    </header>
-    <main>
-        <div class="content">
-            <h2>关于我</h2>
-
-            <p>这应该是一段介绍，但是这个人很懒，什么也没有留下。</p>
-
-            <h2>关于本站</h2>
-            <ul>
-                <li>个人博客</li>
-                <li>技术相关</li>
-                <li>写着玩</li>
-            </ul>
-
-            <p>下面应该是文章列表</p>
-
-            <hr/>
-
-            <ul class="fa-ul main-list">
-                {% for post in site.posts %}
-                <li class="main-list-item">
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                    <span>{{ post.date | date_to_string }}</span>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </main>
+    </comment>
 </div>
 </body>
 </html>
