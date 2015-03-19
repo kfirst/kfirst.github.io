@@ -107,18 +107,19 @@ since it must be aligned with the content */
 
 .navigation {
   background-color: #EFECE0;
-  font-size: 0.8em;
+  font-size: 0.8em !important;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px 0;
-  margin: 20px 0;
+  margin: 20px 0 400px 0;
+  position: relative;
 }
 
 .navigation span {
   padding: 0 10px;
 }
 
-.navigation .return-index {
+.navigation .right {
   float: right;
 }
 
@@ -199,7 +200,6 @@ footer {
   main {
     float: right;
     width: 62%;
-    height: 600px;
     padding: 0;
   }
 }

@@ -19,15 +19,26 @@
             {{ content }}
         </div>
         <div class="navigation">
+            <div class="right">
+                <span><a href="{{ site.url }}">返回首页</a></span>
+            </div>
+
+            <div class="right">
+                {% include share.html %}
+            </div>
+
             {% if page.previous.url %}
-            <span>上一篇《<a href="{{ page.previous.url }}">{{ page.previous.title }}</a>》</span>
+            <div>
+                <span>上一篇《<a href="{{ page.previous.url }}">{{ page.previous.title }}</a>》</span>
+            </div>
             {% endif %}
 
             {% if page.next.url %}
-            <span>下一篇《<a href="{{ page.next.url }}">{{ page.next.title }}</a>》</span>
+            <div>
+                <span>下一篇《<a href="{{ page.next.url }}">{{ page.next.title }}</a>》</span>
+            </div>
             {% endif %}
 
-            <span class="return-index"><a href="{{ site.url }}">返回首页</a></span>
         </div>
     </main>
     <comment>
