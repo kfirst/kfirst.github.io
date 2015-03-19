@@ -1,11 +1,14 @@
-pre {
+.highlight {
+    font-size : 13px;
+    line-height: 1.42857;
+}
+
+.highlight pre {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     border-radius: 4px;
     color: #333;
     display: block;
-    font-size: 13px;
-    line-height: 1.42857;
     margin: 0 0 10px;
     padding: 9.5px;
     word-break: break-all;
@@ -14,7 +17,7 @@ pre {
 
 .highlight .c {
     color: #999988;
-    font-style: italic
+    font-style: italic;
 }
 
 /* Comment */
