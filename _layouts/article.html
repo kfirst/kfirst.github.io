@@ -10,7 +10,9 @@
         <div class="tagline-container"><p>{{ page.subtitle }}</p></div>
         {% endif %}
 
-        <div class="tagline-container"><p>{{ page.date | date_to_string }}</p></div>
+        <div class="tagline-container">
+            <p>{{ page.date | date_to_string }}</p>
+        </div>
         <div style="clear:both"></div>
     </header>
 
